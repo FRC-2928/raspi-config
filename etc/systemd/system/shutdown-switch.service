@@ -1,0 +1,8 @@
+[Unit]
+After=multi-user.target.service
+
+[Service]
+ExecStart=/usr/local/bin/viking-vision/shutdown.py
+
+[Install]
+WantedBy=default.target
