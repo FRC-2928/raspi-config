@@ -1,0 +1,8 @@
+[Unit]
+After=multi-user.target.service
+
+[Service]
+ExecStart=/usr/bin/python2 /usr/local/bin/viking-vision/viking-vision.py 1 -a 10.29.28.2 -s Right
+
+[Install]
+WantedBy=default.target

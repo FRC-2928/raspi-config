@@ -20,6 +20,7 @@ pip install numpy
 dpkg -i packages/*.deb
 cp -rv ./etc /etc
 cp -rv ./usr /usr
-systemctl enable vision.service
+systemctl enable vision-left.service
+systemctl enable vision-right.service
 systemctl enable shutdown-script.service
 echo "Finished. Reboot to apply changes."
