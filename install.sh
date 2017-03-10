@@ -15,12 +15,11 @@ apt-get install build-essential cmake pkg-config\
 	libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev\
 	libavcodec-dev libavformat-dev libswscale-dev libv4l-dev\
 	libxvidcore-dev libx264-dev libgtk2.0-dev libatlas-base-dev\
-	gfortran python2.7-dev python3-dev python python3 python-pip
-pip install numpy
+	gfortran python2.7-dev python3-dev python python3 python-pip python-numpy
 dpkg --force-all -i packages/*.deb
-cp -rv ./etc /etc
-cp -rv ./usr /usr
+cp -rv ./etc
+cp -rv ./usr
 systemctl enable vision-left.service
 systemctl enable vision-right.service
-systemctl enable shutdown-script.service
+systemctl enable shutdown-switch.service
 echo "Finished. Reboot to apply changes."
